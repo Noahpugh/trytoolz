@@ -12,6 +12,7 @@ def length(sequence):
         int: The number of elements or characters
     """
     pass
+    return len(sequence)
 
 def get_first(sequence):
     """
@@ -24,7 +25,7 @@ def get_first(sequence):
         any or str: The first element (for lists) or first character (for strings)
     """
     pass
-
+    return (sequence)[0]
 def get_last(sequence):
     """
     Retrieve the last element of a list or string.
@@ -36,6 +37,7 @@ def get_last(sequence):
         any or str: The last element (for lists) or last character (for strings)
     """
     pass
+    return (sequence)[-1]
 
 def get_at_index(sequence, index):
     """
@@ -49,6 +51,7 @@ def get_at_index(sequence, index):
         any or str: The element at the given index (any type for lists, str for strings)
     """
     pass
+    return sequence[index]
 
 def get_slice(sequence, start, end):
     """
@@ -63,6 +66,7 @@ def get_slice(sequence, start, end):
         list or str: Subsequence of the same type as input
     """
     pass
+    return sequence[start:end]
 
 def append_item(lst, item):
     """
@@ -76,6 +80,8 @@ def append_item(lst, item):
         list: The modified list
     """
     pass
+    lst.append(item)
+    return lst
 
 def remove_item(lst, item):
     """
@@ -89,6 +95,8 @@ def remove_item(lst, item):
         list: The modified list
     """
     pass
+    lst.remove(item)
+    return lst
 
 def count_item(lst, item):
     """
@@ -102,6 +110,7 @@ def count_item(lst, item):
         int: Number of occurrences
     """
     pass
+    return lst.count(item)
 
 def reverse_sequence(sequence):
     """
@@ -114,6 +123,7 @@ def reverse_sequence(sequence):
         list or str: The reversed sequence (same type as input)
     """
     pass
+    return sequence[::-1]
 
 def join_items(lst, separator):
     """
@@ -127,3 +137,4 @@ def join_items(lst, separator):
         str: The joined string
     """
     pass
+    return separator.join(lst)

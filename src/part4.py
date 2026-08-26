@@ -12,6 +12,7 @@ def create_dict(keys, values):
         dict: Dictionary mapping keys to values
     """
     pass
+    return dict(zip(keys, values))
 
 def get_value(dct, key):
     """
@@ -25,6 +26,8 @@ def get_value(dct, key):
         any: The value associated with the key if found, otherwise None
     """
     pass
+    return dct.get(key)
+    #return list(dct(get_values))
 
 def set_value(dct, key, value):
     """
@@ -39,6 +42,8 @@ def set_value(dct, key, value):
         dict: The modified dictionary
     """
     pass
+    dct[key] = value
+    return dct
 
 def has_key(dct, key):
     """
@@ -52,6 +57,7 @@ def has_key(dct, key):
         bool: True if key exists, False otherwise
     """
     pass
+    return key in dct
 
 def get_keys(dct):
     """
@@ -64,6 +70,7 @@ def get_keys(dct):
         list: List of all keys
     """
     pass
+    return list(dct.keys())
 
 def get_values(dct):
     """
@@ -76,6 +83,7 @@ def get_values(dct):
         list: List of all values
     """
     pass
+    return list(dct.values())
 
 def count_keys(dct):
     """
@@ -88,6 +96,7 @@ def count_keys(dct):
         int: Number of key-value pairs
     """
     pass
+    return len(dct)
 
 def remove_key(dct, key):
     """
@@ -101,6 +110,9 @@ def remove_key(dct, key):
         dict: The modified dictionary
     """
     pass
+    if key in dct:
+        del dct[key]
+    return dct
 
 def iterate_list(lst, callback):
     """
@@ -114,6 +126,7 @@ def iterate_list(lst, callback):
         list: List containing the results from applying callback to each element
     """
     pass
+    return [callback(item) for item in lst]
 
 def find_item(lst, predicate):
     """
@@ -127,3 +140,7 @@ def find_item(lst, predicate):
         any: The first matching item if found, otherwise None
     """
     pass
+    for item in lst:
+        if predicate(item):
+            return item
+    return None

@@ -165,14 +165,14 @@ def test_part1():
         @runner.it("should work with positive ints")
         def test_get_remainder_positive_ints():
             assert main.get_remainder(4,2) == 0
-            assert main.get_remainder(5,2) == 1           
+            assert main.get_remainder(5,2) == 1
         @runner.it("should work with negative ints")
         def test_get_remainder_negative_ints():
             assert main.get_remainder(-4,2) == 0
             assert main.get_remainder(4,-2) == 0
             assert main.get_remainder(-4,-2) == 0
 
-            assert main.get_remainder(-5,2) == 1 
+            assert main.get_remainder(-5,2) == 1
             assert main.get_remainder(5,-2) == -1
             assert main.get_remainder(-5,-2) == -1
         @runner.it("should work with positive floats")
@@ -230,4 +230,4 @@ def test_part1():
         @runner.it("should work with negative floats")
         def test_exponent_negative_floats():
             assert main.exponent(-2, 0.5) == pow(-2, 0.5)
-            assert main.exponent(2, -0.5) == pow(2, -0.5) 
+            assert main.exponent(2, -0.5) == pow(2, -0.5)
